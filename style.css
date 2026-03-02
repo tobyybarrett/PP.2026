@@ -52,7 +52,7 @@ body{
   color: #cfd6e6;
 }
 
-/*Adam Silver picture styling*/
+/*all pictures styling*/
 .hero-img {
   width: 100%;
   max-width: 800px;
@@ -134,16 +134,25 @@ a{
 }
 
 /*removes nav bar for phones/tablets, adds hamburger*/
-@media (max-width: 768px){
-
-  .nav-buttons{
+@media (max-width: 768px) {
+  .nav-buttons {
     display: none;
-
-  .hamburger{
+  }
+  .hamburger {
     display: inline-flex;
   }
 
-}
+  /*was having some trouble with the hero and headline overlapping with the nav bar*/
+  .hero {
+    height: auto;
+    padding: 60px 20px 30px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .heading.subhead {
+    font-size: 16px;
+  }
 }
 
 /*bolding the kicker*/
@@ -238,4 +247,21 @@ a{
   width: 100%;
   height: 650px;
   display: block;
+}
+
+
+.nav.buttons.nav-open {
+  display: flex;
+  /*to stack links vertically, becasuse looked weird horizontally*/
+  flex-direction: column;
+  position: absolute;
+  /*navbar above dropdown, put it on the left*/
+  top: 56px;
+  left: 0;
+  width: 100%;
+  background: rgba(11, 13, 18, 0.97);
+  /*padding above and below links, a border, and colors bottom border*/
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 9;
 }
