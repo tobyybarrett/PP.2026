@@ -135,7 +135,7 @@ a{
 
 /*removes nav bar for phones/tablets, adds hamburger*/
 @media (max-width: 768px) {
-  .nav-buttons {
+  .nav buttons {
     display: none;
   }
   .hamburger {
