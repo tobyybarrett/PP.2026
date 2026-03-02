@@ -1,0 +1,241 @@
+/*headlines, headings, kickers use Plus Jakarta*/
+h1, h2, h3,.kicker{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+/*main styling stuff*/
+body{
+  margin: 0;
+  /*body more readable in TNR*/
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  color: #e9eef7;
+
+  /*dark black fading into deep blue design*/
+  background: linear-gradient(
+    135deg,
+    #0b0d12 0%,
+    #111622 40%,
+    #0f1b2f 70%,
+    #0b0d12 100%
+  );
+
+  min-height: 100vh;
+}
+
+.container{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 20px;
+}
+
+/*styling, alignment and stuff of hero and main headline*/
+.hero{
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1{
+  font-size: 72px;
+  margin-bottom: 16px;
+}
+
+.heading.subhead{
+  font-size: 20px;
+  line-height: 1.4;
+  color: #cfd6e6;
+}
+
+/*Adam Silver picture styling*/
+.hero-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto 8px auto;
+  border-radius: 8px;
+  opacity: 0.85;
+  margin-top: 20px;
+}
+
+/*image caption styling, italicizing, and stuff*/
+.img-caption {
+  text-align: center;
+  font-size: 14px;
+  color: #8a95a8;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/*nav bar design*/
+.navbar{
+  position: sticky;                 
+  top: 0;
+  /*nav bar sitting on top of any elements while scrolling:*/
+  z-index: 10;      
+  /*making links, buttons sit side-by-side and be centered vertically*/                
+  display: flex;                    
+  align-items: center;      
+  /*some space between buttons and side and top*/
+  padding: 12px 24px;
+  background: rgba(11, 13, 18, 0.88);  
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* container for nav links, spacing relative to one another */
+.nav buttons{
+  display: flex;
+  gap: 14px;     
+}
+
+/*making links on nav bar same color as the rest of the text*/
+a{
+  color: inherit;
+}
+
+/* individual nav bar links */
+.nav-item{
+    /* makes links side by side, centered, and padded*/
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  /*did this to remove the underlining underneath the links*/
+  text-decoration: none;
+  /*makes the buttons into kind of a pill shape*/
+  border-radius: 999px;          
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  color: #e9eef7;
+}
+
+/* buttons on the main page that take you to other pages, wanted to make them into kind of pill-shaped buttons*/
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border: 1px solid #e9eef7;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.05rem;
+}
+
+/* to add a white glow when you hover over the nav buttons */
+.nav-item:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+/*removes nav bar for phones/tablets, adds hamburger*/
+@media (max-width: 768px){
+
+  .nav-buttons{
+    display: none;
+
+  .hamburger{
+    display: inline-flex;
+  }
+
+}
+}
+
+/*bolding the kicker*/
+.kicker {
+  font-weight: 700;
+}
+
+/*center-aligning the footer*/
+.footer {
+  text-align: center;
+}
+
+.flourish-wrapper {
+  max-width: 580px;
+  margin: 0 auto 24px auto;
+}
+
+/*styling for flourish data vizes + captions*/
+.viz-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.viz-subhead {
+  font-size: 15px;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.viz-caption {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+
+/*about section headshot + styling*/
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.headshot {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.about-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/*YouTube video formatting and styling. same as i used in DPL assignment*/
+.video-wrapper{
+  margin-top: 20px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/*knight lab storyline styling. was having trouble reading it against dark background, so wrapped it in this white cube*/
+.storyline-wrapper {
+  max-width: 800px;
+  margin: 0 auto 24px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 20px 20px 0px 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.storyline-wrapper iframe {
+  width: 100%;
+  height: 650px;
+  display: block;
+}
